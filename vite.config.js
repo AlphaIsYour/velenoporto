@@ -18,8 +18,7 @@ export default defineConfig({
         include: ["lenis"],
     },
     build: {
-        commonjsOptions: {
-            include: [/node_modules/],
-        },
+        outDir: "public/build", // Pastiin ke sini
+        manifest: true,
     },
 });

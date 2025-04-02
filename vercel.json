@@ -5,6 +5,16 @@
         "api/index.php": { "runtime": "vercel-php@0.6.0" }
     },
     "routes": [{ "src": "/(.*)", "dest": "/api/index.php" }],
+    "builds": [
+        {
+            "src": "public/**/*",
+            "use": "@vercel/static"
+        },
+        {
+            "src": "api/index.php",
+            "use": "vercel-php@0.6.0"
+        }
+    ],
     "env": {
         "APP_ENV": "production",
         "APP_DEBUG": "false",
