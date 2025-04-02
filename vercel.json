@@ -1,24 +1,22 @@
 {
     "version": 2,
     "framework": null,
-    "functions": {
-        "api/index.php": { "runtime": "vercel-php@0.6.0" }
-    },
-    "routes": [{ "src": "/(.*)", "dest": "/api/index.php" }],
     "builds": [
-        {
-            "src": "public/**/*",
-            "use": "@vercel/static"
-        },
         {
             "src": "api/index.php",
             "use": "vercel-php@0.6.0"
+        },
+        {
+            "src": "public/**/*",
+            "use": "@vercel/static"
         }
     ],
+    "routes": [{ "src": "/(.*)", "dest": "/api/index.php" }],
+    "installCommand": "php -r \"copy('https://getcomposer.org/installer', 'composer-setup.php');\" && php composer-setup.php && php -r \"unlink('composer-setup.php');\" && php composer.phar install && npm install",
     "env": {
         "APP_ENV": "production",
         "APP_DEBUG": "false",
-        "APP_URL": "https://velenoporto.vercel.app",
+        "APP_URL": "https://velenoportoo.vercel.app",
         "APP_KEY": "base64:WK1qtS1hTcYj18raH/zpxaghRQC0DGsomDZnjLjLyD4="
     }
 }
