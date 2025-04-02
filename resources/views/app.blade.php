@@ -149,7 +149,7 @@
     });
     </script>
 
-      @vite('resources/js/app.jsx')
+      @vite('resources/js/app.js')
       <script src="{{ asset("js/style.js") }}"></script>
       <script src="{{ asset('js/catch-me.js') }}"></script>
   </body>
