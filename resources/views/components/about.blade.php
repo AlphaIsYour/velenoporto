@@ -1,10 +1,8 @@
 <section class="about">
     <div class="min-h-screen bg-gradient-to-br from-blue-900 via-gray-900 to-white-700 p-8 rounded-2xl">
       <div class="max-w-7xl mx-auto">
-          <!-- Main Content Container with Glass Effect -->
           <div class="backdrop-blur-lg bg-white/10 rounded-3xl p-8 shadow-2xl">
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-12" data-aos="fade-down" data-aos-offset="200" data-aos-easing="ease-in-sine">
-                   <!-- Profile Image Section -->
                    <div class="lg:col-span-3 flex flex-col items-center" 
                    data-aos="fade-right"
                    data-aos-offset="200"
@@ -17,7 +15,6 @@
                       </div>
                   </div>
 
-                  <!-- Info Section -->
                   <div class="lg:col-span-9" data-aos="fade-left"data-aos-offset="200" data-aos-anchor-placement="center-bottom">
                       <div class="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
                           <h1 class="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-white mb-2">
@@ -25,7 +22,6 @@
                           </h1>
                           <p class="text-xl text-blue-100 mb-6">Mahasiswa D3 Teknologi Informasi | Web Developer | AI Enthusiast</p>
                           
-                          <!-- Contact Grid -->
                           <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                               <div class="flex items-center gap-3 bg-white/5 rounded-xl p-3 hover:bg-white/10 transition-all" data-aos="zoom-in" data-aos-delay="200">
                                   <svg class="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -50,9 +46,7 @@
                   </div>
               </div>
 
-              <!-- Skills Section -->
               <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
-                  <!-- Technical Skills -->
                   <div class="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10" 
        data-aos="fade-up"
        data-aos-anchor-placement="bottom-bottom">
@@ -60,7 +54,6 @@
                           Technical Skills
                       </h2>
                       <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
-                          <!-- Programming Languages dengan animasi yang berbeda -->
                           <div class="flex flex-col items-center p-4 bg-white/5 rounded-xl hover:bg-white/10 transition-all group" data-aos="zoom-in" data-aos-delay="200">
                               <img src="{{ asset("pmrg/html.png") }}" alt="Java" class="w-12 h-12 mb-2 group-hover:scale-110 transition-transform">
                               <span class="text-blue-100">HTML</span>
@@ -85,11 +78,9 @@
                               <img src="{{ asset("pmrg/java.png") }}" alt="Java" class="w-12 h-12 mb-2 group-hover:scale-110 transition-transform">
                               <span class="text-blue-100">Java</span>
                           </div>
-                          <!-- ... skill items lainnya dengan delay berbeda ... -->
                       </div>
                   </div>
 
-                  <!-- Frameworks dengan animasi yang berbeda -->
                   <div class="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10" 
        data-aos="fade-up"
        data-aos-anchor-placement="bottom-bottom"
@@ -98,7 +89,6 @@
                           Frameworks & Tools
                       </h2>
                       <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
-                          <!-- Framework items dengan animasi -->
                           <div class="flex flex-col items-center p-4 bg-white/5 rounded-xl hover:bg-white/10 transition-all group" data-aos="zoom-in" data-aos-delay="200">
                               <img src="{{ asset('pmrg/laravel.png') }}" alt="Laravel" class="w-12 h-12 mb-2 group-hover:scale-110 transition-transform">
                               <span class="text-blue-100">Laravel</span>
@@ -111,12 +101,10 @@
                               <img src="{{ asset('pmrg/tailwind.jpg') }}" alt="Laravel" class="w-12 h-12 mb-2 group-hover:scale-110 transition-transform">
                               <span class="text-blue-100">Tailwind</span>
                           </div>
-                          <!-- ... framework items lainnya ... -->
                       </div>
                   </div>
               </div>
 
-              <!-- Education & Profile -->
               <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
                   <!-- Education -->
                   <div class="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10" data-aos="fade-up" data-aos-duration="400">
@@ -150,7 +138,6 @@
                                   <p class="text-blue-300">Native</p>
                               </div>
                           </div>
-                          <!-- ... language items lainnya ... -->
                       </div>
                   </div>
               </div>

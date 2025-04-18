@@ -29,7 +29,6 @@
 </div>
 
 <style>
-    /* public/css/catch-me.css */
 .catch-me-container {
     width: 100%;
     height: 100vh;
@@ -128,58 +127,45 @@ document.addEventListener("DOMContentLoaded", function () {
     const section = document.querySelector(".catch-me-section");
     const button = document.querySelector(".catch-me-button");
     
-    // Pastikan tombol awalnya terlihat
     button.style.visibility = "visible";
     
-    // Variabel untuk posisi tombol
     let buttonX = section.clientWidth / 2;
     let buttonY = section.clientHeight / 2;
     
-    // Flag untuk mengetahui apakah cursor berada di dalam section
     let isCursorInSection = false;
     let cursorX = 0;
     let cursorY = 0;
-    
-    // Perlin Noise untuk gerakan random yang smooth
-    // Simple implementation of noise function
+
     function noise(x, y) {
         const X = Math.floor(x) & 255;
         const Y = Math.floor(y) & 255;
         return (Math.sin(X * 12.9898 + Y * 78.233) * 43758.5453) % 1;
     }
     
-    // Fungsi untuk menggerakkan tombol secara random
     function moveRandomly() {
         if (!isCursorInSection) {
             const time = Date.now() * 0.001;
             const noiseX = noise(time * 0.5, 0);
             const noiseY = noise(0, time * 0.5);
-            
-            // Buat gerakan random pelan
             const sectionRect = section.getBoundingClientRect();
             const buttonRect = button.getBoundingClientRect();
             
             const centerX = sectionRect.width / 2;
             const centerY = sectionRect.height / 2;
             
-            // Range pergerakan (jangan terlalu lebar)
             const rangeX = sectionRect.width * 0.3;
             const rangeY = sectionRect.height * 0.3;
             
-            // Posisi target baru (tetap dalam batas)
             const targetX = centerX + (noiseX - 0.5) * rangeX;
             const targetY = centerY + (noiseY - 0.5) * rangeY;
             
-            // Transisi lambat ke posisi baru
             buttonX = targetX;
             buttonY = targetY;
             
-            // Terapkan posisi baru dengan transisi yang sudah diatur di CSS
             button.style.transform = `translate(calc(-50% + ${buttonX - centerX}px), calc(-50% + ${buttonY - centerY}px))`;
         }
     }
     
-    // Fungsi untuk menggerakkan tombol menuju cursor
     function moveTowardsCursor() {
         if (isCursorInSection) {
             const sectionRect = section.getBoundingClientRect();
@@ -192,11 +178,9 @@ document.addEventListener("DOMContentLoaded", function () {
             const centerX = sectionRect.width / 2;
             const centerY = sectionRect.height / 2;
             
-            // Hitung posisi target (sekarang MENDEKATI cursor)
             buttonX = relativeX;
             buttonY = relativeY;
             
-            // Batasi posisi agar tetap dalam section
             const maxX = sectionRect.width - buttonRect.width / 2;
             const maxY = sectionRect.height - buttonRect.height / 2;
             const minX = buttonRect.width / 2;
@@ -205,12 +189,10 @@ document.addEventListener("DOMContentLoaded", function () {
             buttonX = Math.max(minX, Math.min(buttonX, maxX));
             buttonY = Math.max(minY, Math.min(buttonY, maxY));
             
-            // Terapkan posisi baru dengan transisi lambat (diatur di CSS)
             button.style.transform = `translate(calc(-50% + ${buttonX - centerX}px), calc(-50% + ${buttonY - centerY}px))`;
         }
     }
     
-    // Event listener untuk mouseenter dan mouseleave
     section.addEventListener("mouseenter", function() {
         isCursorInSection = true;
     });
@@ -219,21 +201,18 @@ document.addEventListener("DOMContentLoaded", function () {
         isCursorInSection = false;
     });
     
-    // Event listener untuk mouse move
     section.addEventListener("mousemove", function(e) {
         cursorX = e.clientX;
         cursorY = e.clientY;
         moveTowardsCursor();
     });
     
-    // Jalankan gerakan random saat tidak ada hover
     setInterval(function() {
         if (!isCursorInSection) {
             moveRandomly();
         }
-    }, 2000); // Update gerakan random setiap 2 detik
+    }, 2000); 
     
-    // Initial position
     moveRandomly();
 });
 </script>
