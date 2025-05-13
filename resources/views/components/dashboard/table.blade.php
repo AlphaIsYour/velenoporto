@@ -224,7 +224,6 @@ async function showEditForm(id) {
                 })
                 .then(response => response.json())
                 .then(data => {
-                    // Tampilkan pesan sukses
                     Swal.fire(
                         'Terhapus!',
                         'Project berhasil dihapus.',
