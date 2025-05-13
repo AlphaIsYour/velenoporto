@@ -108,7 +108,6 @@ async function showEditForm(id) {
     const response = await fetch(`/projects/${id}`);
     const project = await response.json();
     
-    // Show SweetAlert form with better styling
     Swal.fire({
         title: 'Edit Project',
         html: `
