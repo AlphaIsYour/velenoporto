@@ -171,7 +171,6 @@ document.addEventListener("DOMContentLoaded", function () {
             const sectionRect = section.getBoundingClientRect();
             const buttonRect = button.getBoundingClientRect();
             
-            // Hitung posisi relatif cursor dalam section
             const relativeX = cursorX - sectionRect.left;
             const relativeY = cursorY - sectionRect.top;
             
