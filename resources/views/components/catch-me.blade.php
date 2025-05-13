@@ -68,7 +68,7 @@
     border-radius: 0.5rem;
     cursor: pointer;
     z-index: 5;
-    transition: transform 1.5s ease-out; /* Transisi lebih lambat */
+    transition: transform 1.5s ease-out; 
     will-change: transform;
     pointer-events: auto;
     top: 50%;
