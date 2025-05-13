@@ -229,7 +229,6 @@ async function showEditForm(id) {
                         'Project berhasil dihapus.',
                         'success'
                     ).then(() => {
-                        // Refresh halaman
                         window.location.reload();
                     });
                 })
