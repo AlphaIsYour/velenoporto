@@ -104,7 +104,6 @@
 
 <script>
 async function showEditForm(id) {
-    // Fetch existing project data
     const response = await fetch(`/projects/${id}`);
     const project = await response.json();
     
