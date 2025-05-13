@@ -214,7 +214,7 @@ async function showEditForm(id) {
             cancelButtonText: 'Batal'
         }).then((result) => {
             if (result.isConfirmed) {
-                // Kirim DELETE request menggunakan AJAX
+                
                 fetch(`/projects/${id}`, {
                     method: 'DELETE',
                     headers: {
