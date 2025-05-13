@@ -233,7 +233,6 @@ async function showEditForm(id) {
                     });
                 })
                 .catch(error => {
-                    // Tampilkan pesan error
                     Swal.fire(
                         'Error!',
                         'Gagal menghapus project.',
