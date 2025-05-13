@@ -1,6 +1,5 @@
 @props(['projects'])
 
-{{-- Add SweetAlert2 CSS dan JS di bagian head --}}
 <link href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.7.32/sweetalert2.min.css" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.7.32/sweetalert2.all.min.js"></script>
 
